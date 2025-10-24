@@ -62,7 +62,7 @@ ContactManagement/
 1. **Clone or Download** the project files
 2. **Navigate** to the project directory:
    ```bash
-   cd ContactManagement
+   cd Contact_Book
    ```
 3. **Restore** dependencies (if needed):
    ```bash
@@ -80,7 +80,7 @@ ContactManagement/
 ### Option 1: Using .NET CLI
 ```bash
 # Navigate to project directory
-cd ContactManagement
+cd Contact_Book
 
 # Run the application
 dotnet run
