@@ -27,6 +27,13 @@ namespace ContactManagement.Controllers
             return View(contacts);
         }
 
+        // GET: Contacts/List - Simple list view for navigation
+        public async Task<IActionResult> List()
+        {
+            var contacts = await _context.GetContactsAsync();
+            return View(contacts);
+        }
+
         // GET: Contacts/Details/5
         public async Task<IActionResult> Details(int? id)
         {

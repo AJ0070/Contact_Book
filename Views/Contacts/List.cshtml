@@ -5,11 +5,9 @@
 }
 
 <div class="d-flex justify-content-between align-items-center mb-4">
-    <h1>Contact Management</h1>
+    <h1>Contact List</h1>
     <div>
-        <a asp-action="List" class="btn btn-outline-secondary me-2 btn-sm">Simple List</a>
-        <a asp-action="Export" class="btn btn-success me-2">Export to CSV</a>
-        <a asp-action="Create" class="btn btn-primary">Create New Contact</a>
+        <a asp-action="Index" class="btn btn-outline-primary btn-sm">Full Management</a>
     </div>
 </div>
 
@@ -21,19 +19,11 @@
     </div>
 }
 
-<form asp-action="Index" method="get" class="mb-4">
-    <div class="input-group">
-        <input type="text" name="searchString" value="@ViewData["CurrentFilter"]" class="form-control" placeholder="Search by name, email, or phone..." />
-        <button type="submit" class="btn btn-outline-secondary">Search</button>
-        <a asp-action="Index" class="btn btn-outline-danger">Clear</a>
-    </div>
-</form>
-
 @if (!Model.Any())
 {
     <div class="text-center text-muted">
         <h3>No contacts found</h3>
-        <p>Start by <a asp-action="Create">creating a new contact</a>.</p>
+        <p><a asp-action="Create">Create your first contact</a> to get started.</p>
     </div>
 }
 else
